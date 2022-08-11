@@ -106,9 +106,71 @@ html {
   margin-bottom: 0;
 }
 
+/* Form styling */
+
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 80vw;
+  margin: 0 auto;
+}
+
+.formLabel {
+  text-transform: uppercase;
+}
+
+.input {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+
+.numberInput::-webkit-inner-spin-button,
+.numberInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numberInput {
+  -moz-appearance: textfield;
+}
+
+.expDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.headers {
+  display: flex;
+}
+
+.headers label:nth-child(1) {
+  margin-right: 2.3rem;
+}
+
+.dateInputs {
+  display: flex;
+  width: 100%;
+}
+
+.dateInput {
+  text-align: center;
+  width: 5rem;
+}
+
+.dateInputs input:nth-child(2) {
+  margin: 1rem 0.5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  background: none;
+  border: 1px solid var(--dark-violet);
+  border-radius: 10px;
+  color: var(--white);
+  background-color: var(--dark-violet);
 }
