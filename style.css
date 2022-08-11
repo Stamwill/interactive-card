@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+}
+
+/* variables to use throughout the project */
+:root {
+  /* input borders */
+  --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --error: hsl(0, 100%, 66%);
+
+  /*  colors  */
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(270, 3%, 87%);
+  --dark-gray: hsl(279, 6%, 55%);
+  --dark-violet: hsl(278, 68%, 11%);
+}
+
+.root {
+}
+
+.hero {
+  position: relative;
+  height: 40vh;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  height: 30vh;
+  max-height: 40vh;
+}
+
+/* Card positioning on hero */
+
+.card {
+  position: relative;
+  width: 18rem;
+}
+
+.cardBack {
+  left: 12%;
+  top: 10%;
+}
+
+.cardFront {
+  top: 40%;
+  left: 5%;
+}
+
+/* End card positioning on hero */
+
+.cardBackground {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  color: var(--white);
+  padding: 1rem;
+}
+
+.cvc {
+  z-index: 10;
+  position: absolute;
+  left: 75%;
+  top: 52px;
+  color: var(--white);
+}
+
+.cardLogo {
+  width: 3rem;
+}
+
+.cardNum {
+  padding-top: 1rem;
+  margin-bottom: 0;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardHolder,
+.expDate {
+  margin-bottom: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}

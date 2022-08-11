@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Interactive Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="hero">
+        <img class="background" src="src/images/bgMainMobile.png" />
+
+        <div class="card cardBack">
+          <img
+            class="cardBackground"
+            src="src/images/bgCardBack.png"
+            alt="back of card"
+          />
+          <div>
+            <p class="cvc">000</p>
+          </div>
+        </div>
+
+        <div class="card cardFront">
+          <img
+            class="cardBackground"
+            src="src/images/bgCardFront.png"
+            alt="front of card"
+          />
+
+          <div class="cardContainer">
+            <img class="cardLogo" src="/src/images/cardLogo.svg" />
+
+            <p class="cardNum">0000 0000 0000 0000</p>
+
+            <div class="nameContainer">
+              <p class="cardHolder">Jane Appleseed</p>
+              <p class="expDate">09/26</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="formContainer">
+        <form class="form" action="">
+          <label for="name">cardholder name</label>
+          <input type="text" name="name" id="name" />
+          <label for="num">card number</label>
+          <input type="number" name="num" id="num" />
+          <label for="date"> exp.date (mm/yy)</label>
+          <input type="date" name="date" id="date" />
+          <button>Confirm</button>
+        </form>
+      </div>
+    </div>
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+    e.g. 123 Confirm -->
+
+    <!-- Completed state start -->
+
+    <!-- Thank you! We've added your card details Continue -->
+  </body>
+</html>
