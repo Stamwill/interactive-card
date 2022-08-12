@@ -183,4 +183,48 @@ html {
   .form {
     width: 40vw;
   }
+
+  .cardBack {
+    left: 35%;
+  }
+
+  .cardFront {
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .root {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  .hero {
+    height: 100vh;
+    width: 30vw;
+  }
+
+  .background {
+    height: 100vh;
+    max-height: 100vh;
+    width: 30vw;
+  }
+
+  .cardBack {
+    left: 60%;
+    top: 55%;
+  }
+
+  .cardFront {
+    top: 30%;
+    left: 45%;
+  }
+
+  .form {
+    position: relative;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
 }
