@@ -164,6 +164,10 @@ html {
   margin: 1rem 0.5rem;
 }
 
+#cvc {
+  width: 100%;
+}
+
 .btn {
   margin-top: 1rem;
   padding: 1.5rem;
@@ -173,4 +177,10 @@ html {
   border-radius: 10px;
   color: var(--white);
   background-color: var(--dark-violet);
+}
+
+@media screen and (min-width: 700px) {
+  .form {
+    width: 40vw;
+  }
 }
