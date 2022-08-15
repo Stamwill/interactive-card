@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:Stamwill/interactive-card.git",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "dev",
+    "build-project": "node build-project.js",
+    "start": "start",
+    "lint": "lint"
+  }
 }
