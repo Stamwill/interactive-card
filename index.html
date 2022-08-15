@@ -59,7 +59,9 @@
             name="name"
             id="name"
             placeholder="Jane Appleseed"
+            required
           />
+
           <label class="formLabel" for="num">card number</label>
           <input
             class="input numberInput"
@@ -67,12 +69,15 @@
             name="num"
             id="num"
             placeholder="1234 5678 9123 1337"
+            required
           />
+
           <div class="expDate">
             <div class="headers">
               <label class="formLabel" for="date"> exp.date (mm/yy)</label>
               <label class="formLabel" for="cvc">CVC</label>
             </div>
+
             <div class="dateInputs">
               <input
                 class="input numberInput dateInput"
@@ -80,20 +85,25 @@
                 name="date"
                 id="date"
                 placeholder="MM"
+                required
               />
+
               <input
                 class="input numberInput dateInput"
                 type="num"
                 name="date"
                 id="date"
                 placeholder="YY"
+                required
               />
+
               <input
                 class="input numberInput dateInput"
                 type="num"
                 name="cvc"
                 id="cvc"
                 placeholder="123"
+                required
               />
             </div>
           </div>
