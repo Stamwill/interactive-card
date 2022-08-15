@@ -61,6 +61,7 @@
             placeholder="Jane Appleseed"
             required
           />
+          <p class="error">This is an error</p>
 
           <label class="formLabel" for="num">card number</label>
           <input
@@ -69,8 +70,11 @@
             name="num"
             id="num"
             placeholder="1234 5678 9123 1337"
+            role="presentation"
+            autocomplete="nope"
             required
           />
+          <p class="error">This is an error</p>
 
           <div class="expDate">
             <div class="headers">
@@ -118,5 +122,7 @@
     <!-- Completed state start -->
 
     <!-- Thank you! We've added your card details Continue -->
+
+    <script src="script.js"></script>
   </body>
 </html>
