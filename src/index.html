@@ -26,7 +26,7 @@
             alt="back of card"
           />
           <div>
-            <p class="cvc">000</p>
+            <p class="cardCvc" id="cardCvc">000</p>
           </div>
         </div>
 
@@ -40,11 +40,15 @@
           <div class="cardContainer">
             <img class="cardLogo" src="images/cardLogo.svg" />
 
-            <p class="cardNum">0000 0000 0000 0000</p>
+            <p class="cardNum" id="cardNum">1234 5678 9123 1337</p>
 
             <div class="nameContainer">
-              <p class="cardHolder">Jane Appleseed</p>
-              <p class="expDate">09/26</p>
+              <p class="cardHolder" id="cardHolder">Jane Appleseed</p>
+              <div class="cardDateContainer">
+                <p class="expDate" id="cardMonth">09</p>
+                <p>/</p>
+                <p id="cardYear">26</p>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +62,8 @@
             type="text"
             name="name"
             id="name"
-            placeholder="Jane Appleseed"
+            pattern="^[a-zA-Z_]+( [a-zA-Z_]+)*$"
+            placeholder="e.g. Jane Appleseed"
             required
           />
           <p class="error">This is an error</p>
@@ -66,12 +71,12 @@
           <label class="formLabel" for="num">card number</label>
           <input
             class="input numberInput"
-            type="number"
+            type="text"
             name="num"
             id="num"
-            placeholder="1234 5678 9123 1337"
-            role="presentation"
-            autocomplete="nope"
+            placeholder="e.g. 1234 5678 9123 1337"
+            oninput="this.value = this.value.slice(0, this.maxLength);"
+            maxlength="19"
             required
           />
           <p class="error">This is an error</p>
@@ -83,32 +88,50 @@
             </div>
 
             <div class="dateInputs">
-              <input
-                class="input numberInput dateInput"
-                type="num"
-                name="date"
-                id="date"
-                placeholder="MM"
-                required
-              />
+              <div class="month">
+                <input
+                  class="input numberInput dateInput"
+                  type="number"
+                  name="date"
+                  id="month"
+                  placeholder="MM"
+                  oninput="this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="2"
+                  pattern=".{2,}"
+                  required
+                  title="2 characters needed"
+                />
 
-              <input
-                class="input numberInput dateInput"
-                type="num"
-                name="date"
-                id="date"
-                placeholder="YY"
-                required
-              />
+                <p class="error">This is an error</p>
+              </div>
 
-              <input
-                class="input numberInput dateInput"
-                type="num"
-                name="cvc"
-                id="cvc"
-                placeholder="123"
-                required
-              />
+              <div class="year">
+                <input
+                  class="input numberInput dateInput"
+                  type="number"
+                  name="date"
+                  id="year"
+                  placeholder="YY"
+                  oninput="this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="2"
+                  required
+                />
+                <p class="error">this is an error</p>
+              </div>
+
+              <div class="cvc">
+                <input
+                  class="input numberInput dateInput"
+                  type="number"
+                  name="cvc"
+                  id="cvc"
+                  placeholder="e.g. 123"
+                  oninput="this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="3"
+                  required
+                />
+                <p class="error">this is an error</p>
+              </div>
             </div>
           </div>
           <button class="btn">Confirm</button>
