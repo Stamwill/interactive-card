@@ -58,7 +58,7 @@ monthInput.addEventListener("input", (e) => {
   const inputIsValid = e.target.value.length < 2;
   if (inputIsValid === true) {
     monthError.classList.add("visible");
-    monthError.innerText = "Can't be blank";
+    monthError.innerText = "Two Digits";
     error(e);
   } else {
     monthError.classList.remove("visible");
@@ -70,7 +70,7 @@ yearInput.addEventListener("input", (e) => {
   const inputIsValid = e.target.value.length < 2;
   if (inputIsValid === true) {
     yearError.classList.add("visible");
-    yearError.innerText = "Can't be blank";
+    yearError.innerText = "Two Digits";
     error(e);
   } else {
     yearError.classList.remove("visible");
@@ -81,7 +81,7 @@ yearInput.addEventListener("input", (e) => {
 cvcInput.addEventListener("input", (e) => {
   const inputIsValid = e.target.value.length < 3;
   if (inputIsValid === true) {
-    cvcError.innerText = "Can't be blank";
+    cvcError.innerText = "Three Digits";
     cvcError.classList.add("visible");
     error(e);
   } else {
@@ -89,6 +89,8 @@ cvcInput.addEventListener("input", (e) => {
     success(e);
   }
 });
+
+// -------------- Functions for updating the card --------------
 
 const cardNum = document.getElementById("cardNum");
 const cardName = document.getElementById("cardHolder");
@@ -124,4 +126,36 @@ function yearUpdate(e) {
 
 function cvcUpdate(e) {
   cardCvc.textContent = e.target.value;
+}
+
+// -------------- Update form on submit --------------
+
+const formContainer = document.getElementById("formContainer");
+const renderSuccess = document.getElementsByClassName("successPage")[0];
+const btnSubmit = document.getElementsByClassName("btn")[0];
+const btnContinue = document.getElementsByClassName("btn")[1];
+
+btnSubmit.addEventListener("click", formUpdate);
+btnContinue.addEventListener("click", returnHome);
+
+function formUpdate(e) {
+  if (nameInput.value.length < 3) {
+    e.preventDefault();
+  } else if (numInput.value.length < 15) {
+    e.preventDefault();
+  } else if (monthInput.value.length < 2) {
+    e.preventDefault();
+  } else if (yearInput.value.length < 2) {
+    e.preventDefault();
+  } else if (cvcInput.value.length < 3) {
+    e.preventDefault();
+  } else {
+    formContainer.classList.add("hideForm");
+    renderSuccess.classList.add("formSuccess");
+  }
+}
+
+function returnHome() {
+  formContainer.classList.remove("hideForm");
+  renderSuccess.classList.remove("formSuccess");
 }
