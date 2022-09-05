@@ -11,7 +11,7 @@ body {
 html {
 }
 
-/* variables to use throughout the project */
+/* -------------- variables to use throughout the project -------------- */
 :root {
   /* input borders */
   --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
@@ -47,7 +47,7 @@ html {
   max-height: 40vh;
 }
 
-/* Card positioning on hero */
+/* -------------- Card positioning on hero -------------- */
 
 .card {
   position: relative;
@@ -64,7 +64,7 @@ html {
   grid-row: 4;
 }
 
-/* End card positioning on hero */
+/* -------------- End card positioning on hero -------------- */
 
 .cardBackground {
   position: absolute;
@@ -82,7 +82,7 @@ html {
   padding: 1rem;
 }
 
-.cardCvc {
+#cardCvc {
   z-index: 10;
   position: absolute;
   left: 75%;
@@ -94,7 +94,7 @@ html {
   width: 3rem;
 }
 
-.cardNum {
+#cardNum {
   padding-top: 1rem;
   margin-bottom: 0;
 }
@@ -105,8 +105,7 @@ html {
   margin-top: 0.5rem;
 }
 
-.cardHolder,
-.expDate {
+#cardHolder {
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -115,7 +114,7 @@ html {
   display: flex;
 }
 
-/* Form styling */
+/* -------------- Form styling -------------- */
 
 .form {
   display: flex;
@@ -179,7 +178,7 @@ input:focus.borderError {
   margin-right: 1rem;
 }
 
-.dateInputs {
+.dateInputsContainer {
   display: flex;
   width: 100%;
 }
@@ -193,7 +192,7 @@ input:focus.borderError {
   margin: 1rem 0.5rem;
 }
 
-.cvc {
+.cvcFormContainer {
   flex-grow: 2;
 }
 
@@ -226,7 +225,44 @@ input:focus.borderError {
   opacity: 1;
 }
 
-/* Media queries */
+.hideForm {
+  display: none;
+}
+
+/* -------------- suceess after submit -------------- */
+
+.successPage {
+  display: none;
+}
+
+.formSuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.successImg {
+  width: 7rem;
+}
+
+.successHeader {
+  font-size: 2 rem;
+  color: var(--dark-violet);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.successParagraph {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.btnContinue {
+  width: 70%;
+}
+/* -------------- Media queries -------------- */
 
 @media screen and (min-width: 700px) {
   .month,
@@ -268,11 +304,7 @@ input:focus.borderError {
     grid-column: 6;
   }
 
-  .cvc {
-    top: 59px;
-  }
-
-  .cardCvc {
+  #cardCvc {
     top: 59px;
   }
 
@@ -281,5 +313,14 @@ input:focus.borderError {
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
+  }
+
+  .formSuccess {
+    position: relative;
+    right: 15%;
+  }
+
+  .btnContinue {
+    width: 150%;
   }
 }
