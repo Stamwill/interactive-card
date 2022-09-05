@@ -92,26 +92,33 @@ html {
 
 .cardLogo {
   width: 3rem;
+  margin-bottom: 1.1rem;
 }
 
 #cardNum {
   padding-top: 1rem;
   margin-bottom: 0;
+  letter-spacing: 0.2rem;
 }
 
 .nameContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.5rem;
 }
 
-#cardHolder {
+#cardHolder,
+#cardMonth,
+#cardYear,
+.dateDivider {
+  font-size: 0.75rem;
   margin-bottom: 0;
+
   text-transform: uppercase;
 }
 
 .cardDateContainer {
   display: flex;
+  align-items: center;
 }
 
 /* -------------- Form styling -------------- */
@@ -306,6 +313,10 @@ input:focus.borderError {
 
   #cardCvc {
     top: 59px;
+  }
+
+  #cardNum {
+    font-size: 1.2rem;
   }
 
   .form {
