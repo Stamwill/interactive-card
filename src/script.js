@@ -43,7 +43,7 @@ nameInput.addEventListener("input", (e) => {
 });
 
 numInput.addEventListener("input", (e) => {
-  const inputIsValid = e.target.value.length < 15;
+  const inputIsValid = e.target.value.length < 19;
   if (inputIsValid === true) {
     numError.innerText = "Number is too short";
     numError.classList.add("visible");
