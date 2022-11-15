@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:Stamwill/interactive-card.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "^13.0.3"
+  }
 }
